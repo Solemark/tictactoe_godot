@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://d63tocb342vd"]
+
+[ext_resource type="Script" uid="uid://bv848tqhv0rfs" path="res://scenes/game_over_menu.gd" id="1_6ebp1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6skn4"]
+bg_color = Color(0.114897, 0.114897, 0.114897, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ebp1"]
+bg_color = Color(0.986752, 0.986752, 0.986752, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cwb3k"]
+bg_color = Color(3.89859e-06, 0.7279, 0.078722, 1)
+
+[node name="GameOverMenu" type="CanvasLayer"]
+script = ExtResource("1_6ebp1")
+
+[node name="GameOverPanel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -125.0
+offset_right = 100.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6skn4")
+
+[node name="GameOverLabel" type="Label" parent="."]
+offset_left = 370.0
+offset_top = 200.0
+offset_right = 637.0
+offset_bottom = 260.0
+theme_override_font_sizes/font_size = 40
+text = "Crosses Wins!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.425
+anchor_top = 0.5
+anchor_right = 0.425
+anchor_bottom = 0.5
+offset_left = -130.0
+offset_top = -10.0
+offset_right = 120.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_6ebp1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cwb3k")
+text = "Play Again"
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]

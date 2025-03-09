@@ -2,5 +2,5 @@
 
 [ext_resource type="Texture2D" uid="uid://b3kg0lf7j0btk" path="res://assets/cross.jpg" id="1_nsgoa"]
 
-[node name="Cross" type="Sprite2D"]
+[node name="Cross" type="Sprite2D" groups=["crosses"]]
 texture = ExtResource("1_nsgoa")
