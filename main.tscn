@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://dmeu12j8pdgjx"]
+
+[ext_resource type="Script" uid="uid://bilgq3qwd36fo" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://dek0p85kjuoau" path="res://circle.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://b11llgfa3c463" path="res://board.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://coyo2feum6n2g" path="res://cross.tscn" id="3_1bvp3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1bvp3"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lquwl"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+
+[node name="Main" type="Node"]
+script = ExtResource("1_0xm2m")
+circle_scene = ExtResource("2_1bvp3")
+cross_scene = ExtResource("3_1bvp3")
+
+[node name="Board" parent="." instance=ExtResource("2_h2yge")]
+position = Vector2(450, 298.188)
+scale = Vector2(0.195588, 0.189347)
+
+[node name="SidePanel" type="Panel" parent="."]
+custom_minimum_size = Vector2(300, 600)
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1bvp3")
+
+[node name="PlayerLabel" type="Label" parent="."]
+offset_left = 900.0
+offset_right = 1200.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 40
+text = "Next Player"
+horizontal_alignment = 1
+
+[node name="PlayerPanel" type="Panel" parent="."]
+offset_left = 950.0
+offset_top = 75.0
+offset_right = 1150.0
+offset_bottom = 275.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lquwl")
+
+[node name="WinnerLabel" type="Label" parent="."]
+offset_left = 900.0
+offset_top = 500.0
+offset_right = 1200.0
+offset_bottom = 570.0
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
