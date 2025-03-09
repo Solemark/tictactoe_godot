@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://dmeu12j8pdgjx"]
 
-[ext_resource type="Script" uid="uid://bilgq3qwd36fo" path="res://main.gd" id="1_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://dek0p85kjuoau" path="res://circle.tscn" id="2_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://b11llgfa3c463" path="res://board.tscn" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://coyo2feum6n2g" path="res://cross.tscn" id="3_1bvp3"]
+[ext_resource type="Script" uid="uid://bilgq3qwd36fo" path="res://scenes/main.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://dek0p85kjuoau" path="res://scenes/circle.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://b11llgfa3c463" path="res://scenes/board.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://coyo2feum6n2g" path="res://scenes/cross.tscn" id="3_1bvp3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1bvp3"]
 bg_color = Color(0, 0, 0, 0)
@@ -40,7 +40,7 @@ offset_left = 900.0
 offset_right = 1200.0
 offset_bottom = 70.0
 theme_override_font_sizes/font_size = 40
-text = "Next Player"
+text = "Player's Turn"
 horizontal_alignment = 1
 
 [node name="PlayerPanel" type="Panel" parent="."]
